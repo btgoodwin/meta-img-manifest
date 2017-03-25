@@ -10,5 +10,5 @@
     <project name="poky"              remote="yocto"/> <!-- path="poky" implicitly -->
     <project name="meta-openembedded" remote="openembedded" path="poky/meta-openembedded" />
     <project name="meta-img"          remote="mips"         path="poky/meta-img" />
-    <project name="meta-mipspfga-soc"                       path="poky/meta-mipsfpga-soc" />
+    <project name="meta-mipsfpga-soc"                       path="poky/meta-mipsfpga-soc" />
 </manifest>
