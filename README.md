@@ -46,7 +46,7 @@ This repository sets up a build environment for building a Yocto-based file syst
 4.  Initialize the OpenEmbedded Environment. This assumes you created the oe-core directory
     in your home directory.
 
-        $ TEMPLATECONF=`pwd`/poky/meta-mipsfpga-soc/conf source ./poky/oe-init-build-env ./build ./poky/bitbake
+        $ TEMPLATECONF=`pwd`/poky/meta-img/conf source ./poky/oe-init-build-env ./build ./poky/bitbake
 
 
     This copies default configuration information into the build/conf*
@@ -60,5 +60,6 @@ This repository sets up a build environment for building a Yocto-based file syst
     minimum). Also, it takes a considerable amount of time and RAM (try to have at least 8 GB).
 
         $ export MACHINE="xilfpga"
-        $ bitbake mipsfpga-soc-examples
-    
+        $ bitbake mipsfpga-soc-initramfs
+
+6.  At the end of the build, in the above case, you should have a `tmp/deploy/images/xilfpga/vmlinux-initramfs-xilfpga.bin`, which is the kernel plus a RAM-based file system.  Also in that path are the file system and the kernel, separated.
