@@ -4,8 +4,10 @@
     <default revision="morty" remote="origin"/>
     <remote name="origin" fetch="." />
     <remote name="yocto" fetch="git://git.yoctoproject.org" />
+    <remote name="openembedded" fetch="git://github.com/openembedded" />
     <remote name="mips" fetch="git://github.com/MIPS" />
     
     <project name="poky"              remote="yocto"/> <!-- path="poky" implicitly -->
+    <project name="meta-openembedded" remote="openembedded" path="poky/meta-openembedded" />
     <project name="meta-img"          remote="mips"         path="poky/meta-img" />
 </manifest>
